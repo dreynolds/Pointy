@@ -4,14 +4,14 @@
 + (float)calculatePoints:(float)enteredCalories atRate:(float)enteredSatFat {
 	float calculatedPoints, calPoints, fatPoints, roundedPoints;
 	
-	calPoints = (3 * enteredCalories) / 200;
-	fatPoints = enteredSatFat / 4;
+	calPoints = enteredCalories / 70;
+	fatPoints = enteredSatFat / 4.05;
 	calculatedPoints = calPoints + fatPoints;
 
 	roundedPoints = (floorf((calculatedPoints * 2)) / 2);
 
-	//DLog("Calculated Points: %d\n", calculatedPoints);
-	//DLog("Rounded Points: %d\n\n", roundedPoints);
+	DLog("Calculated Points: %d\n", calculatedPoints);
+	DLog("Rounded Points: %d\n\n", roundedPoints);
 	
 	return roundedPoints;
 }
